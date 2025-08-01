@@ -1,3 +1,3 @@
 #!/bin/bash
-$HOME/AppImages/browser.appimage
+flatpak run app.zen_browser.zen
 # change to whatever browser you use

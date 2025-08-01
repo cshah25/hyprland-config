@@ -4,6 +4,13 @@ set -e
 
 # List of packages to install
 PACKAGES=(
+    nm-connection-editor
+    pavucontrol
+    blueman
+    visual-studio-code-bin
+    copyq
+    htop
+    nerd-fonts
     flatpak
     ghostty
     hyprland
@@ -17,7 +24,6 @@ PACKAGES=(
     zsh
     zsh-autosuggestions
     zsh-syntax-highlighting
-    zsh-theme-powerlevel10k-git
 )
 
 echo "░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░                                
@@ -97,8 +103,7 @@ clone_and_copy_config() {
     REPO_URL="https://github.com/cshah25/hyprland-config.git"
     TEMP_DIR="/tmp/hyprland-config"
 
-    wget https://github.com/aquasecurity/tfsec/releases/latest/download/tfsec-linux-amd64
-
+    flatpak install flathub app.zen_browser.zen --assumeyes
     flatpak install dev.vencord.Vesktop --assumeyes
 
     echo "Cloning config repo..."
