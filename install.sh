@@ -108,9 +108,9 @@ clone_and_copy_config() {
     mkdir -p ~/.config
     cp -r "$TEMP_DIR"/* ~/.config/
 
-    echo "Please configure powerlevel10k"
+    echo "Please configure powerlevel10k using the command p10k configure"
 
-    p10k configure
+    # p10k configure
 
     cp "$TEMP_DIR"/.zshrc ~/
 
