@@ -10,6 +10,10 @@ PACKAGES=(
     waybar
     wlogout
     wofi
+    zsh
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-theme-powerlevel10k-git
 )
 
 echo "░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░                                
@@ -48,7 +52,7 @@ detect_distro() {
     fi
 }
 
-# Install yay for Arch-based systems
+# Install yay
 install_yay_arch() {
     if ! command -v yay &>/dev/null; then
         echo "yay not found. Installing yay..."
@@ -60,9 +64,10 @@ install_yay_arch() {
     fi
 }
 
-# Install all packages with yay
-install_with_yay() {
+install_packages() {
     yay -Syu --noconfirm "${PACKAGES[@]}"
+    echo "Installing oh-my-zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
 prompt_config_backup() {
@@ -84,7 +89,6 @@ prompt_config_backup() {
     esac
 }
 
-
 clone_and_copy_config() {
     REPO_URL="https://github.com/cshah25/hyprland-config.git"
     TEMP_DIR="/tmp/hyprland-config"
@@ -95,6 +99,12 @@ clone_and_copy_config() {
     echo "Copying config files to ~/.config/..."
     mkdir -p ~/.config
     cp -r "$TEMP_DIR"/* ~/.config/
+
+    echo "Please configure powerlevel10k"
+
+    p10k configure
+
+    cp "$TEMP_DIR"/.zshrc ~/
 
     echo "Config files copied successfully."
 }
@@ -107,7 +117,7 @@ main() {
     case "$distro" in
         arch | endeavouros | artix)
             install_yay_arch
-            install_with_yay
+            install_packages
             ;;
         *)
             echo "This script currently supports only Arch-based distros using yay."

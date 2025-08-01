@@ -1,4 +1,4 @@
-# 🌌 Hyprland Rice – [Your Theme Name]
+# 🌌 Hyprland Rice
 
 A minimal and beautiful Hyprland configuration featuring:
 - 🧊 **Waybar** with custom styling
@@ -23,3 +23,8 @@ Install this full setup on any **Arch-based distro** with one line:
 bash <(curl -s https://raw.githubusercontent.com/cshah25/hyprland-config/refs/heads/main/install.sh)
 ```
 
+Credits:
+- [Waybar](https://github.com/Prateek7071/dotfiles)
+- [Wlogout](https://github.com/gfhdhytghd/wlogout-theme)
+- [Kitty](https://github.com/dexpota/kitty-themes/blob/master/themes/Parasio_Dark.conf)
+- [zsh Theme](https://github.com/romkatv/powerlevel10k)
