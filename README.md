@@ -1,13 +1,6 @@
 # 🌌 Hyprland Rice
 
-A minimal and beautiful Hyprland configuration featuring:
-- 🧊 **Waybar** with custom styling
-- 🪟 **Wofi** as an app launcher
-- 🔒 **Wlogout** for lock/logout menu (For this please download icons on your own because of copyright issues)
-- 🐈 **Kitty** as the terminal
-- 👻 **Ghostty** optionally supported
-
----
+My very first hyprland rice
 
 ## 📸 Screenshots
 
