@@ -6,10 +6,13 @@ set -e
 PACKAGES=(
     ghostty
     hyprland
+    hyprlock
+    hyprpaper
     kitty
     waybar
     wlogout
     wofi
+    steam
     zsh
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -92,6 +95,10 @@ prompt_config_backup() {
 clone_and_copy_config() {
     REPO_URL="https://github.com/cshah25/hyprland-config.git"
     TEMP_DIR="/tmp/hyprland-config"
+
+    wget https://github.com/aquasecurity/tfsec/releases/latest/download/tfsec-linux-amd64
+
+    flatpak install dev.vencord.Vesktop --assumeyes
 
     echo "Cloning config repo..."
     git clone "$REPO_URL" "$TEMP_DIR"

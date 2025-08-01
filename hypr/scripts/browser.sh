@@ -1,2 +1,3 @@
 #!/bin/bash
-$HOME/AppImages/zen_browser.appimage
+$HOME/AppImages/browser.appimage
+# change to whatever browser you use
