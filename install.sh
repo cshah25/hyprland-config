@@ -4,6 +4,7 @@ set -e
 
 # List of packages to install
 PACKAGES=(
+    flatpak
     ghostty
     hyprland
     hyprlock
