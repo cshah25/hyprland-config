@@ -128,12 +128,12 @@ main() {
     echo "Detected distro: $distro"
 
     case "$distro" in
-        arch | endeavouros | artix)
+        arch | endeavouros | artix | cachyos)
             install_yay_arch
             install_packages
             ;;
         *)
-            echo "This script currently supports only Arch-based distros using yay."
+            echo "This script currently supports only arch endevouros artix & cachyos distros. If you have another arch based distro, you can try editing this script and by passing the initial check."
             exit 1
             ;;
     esac
